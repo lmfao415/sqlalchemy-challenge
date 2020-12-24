@@ -56,7 +56,6 @@ def stations():
 def temps():
     session = Session(engine)
     tobs = session.query(Measurement.date, Measurement.tobs).filter(Measurement.station == 'USC00519281', Measurement.date >= year_date).all()
-
     session.close()
 
     all_temps = []
@@ -72,7 +71,6 @@ def get_date(start):
     temp_values = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= start).all()
     session.close()
 
-   
     results = []
     for x in temp_values:
         results.append({
@@ -80,7 +78,6 @@ def get_date(start):
             "Average":x[1],
             "Max":x[2]
         })
-
 
     return  jsonify(results)
 
@@ -100,6 +97,7 @@ def get_dates(start, end):
         })
 
     return jsonify(results1)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
