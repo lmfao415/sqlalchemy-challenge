@@ -56,7 +56,6 @@ def stations():
 def temps():
     session = Session(engine)
     tobs = session.query(Measurement.date, Measurement.tobs).filter(Measurement.station == 'USC00519281', Measurement.date >= year_date).all()
-    # tobs = session.query(Measurement).filter(Measurement.station == 'USC00519281', Measurement.date >= year_date).all()
 
     session.close()
 
