@@ -17,7 +17,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return (
-        f"Welcome to the stuffnthings !<br/>"
+        f"Welcome to the Hawaii Climate Data!<br/>"
         f"Available Routes:<br/>"
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
@@ -73,14 +73,17 @@ def get_date(start):
     temp_values = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= start).all()
     session.close()
 
-    TMIN = {}
-    TMAX = {}
-    TAVG = {}
-    for minimum, average, maximum in temp_values:
-        TMIN = minimum
+   
+    results = []
+    for x in temp_values:
+        results.append({
+            "Min":x[0],
+            "Average":x[1],
+            "Max":x[2]
+        })
 
 
-    return  jsonify(temp_values)
+    return  jsonify(results)
 
 
 @app.route("/api/v1.0/<start>/<end>")
@@ -88,7 +91,16 @@ def get_dates(start, end):
     session = Session(engine)
     temp_values2 = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= start, Measurement.date <= end).all()
     session.close()
-    return jsonify(temp_values2)
+
+    results1 = []
+    for x in temp_values2:
+        results1.append({
+            "Min":x[0],
+            "Average":x[1],
+            "Max":x[2]
+        })
+
+    return jsonify(results1)
 
 if __name__ == "__main__":
     app.run(debug=True)
