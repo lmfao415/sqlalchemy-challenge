@@ -4,6 +4,7 @@ This repository uses SQLAlchemy ORM queries, Pandas, and Matplotlib to explore a
 
 Using SQLalchemy, the database is queried and then Pandas used to organize and then plot the daily precipitation values:
 
+![q](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/query.png?raw=true)
 ![sample](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/precp.png?raw=true)
 
 Querying is further used to return the most active weather station and a histogram of recorder temperatures plotted:
