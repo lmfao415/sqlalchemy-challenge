@@ -44,6 +44,9 @@ This project also includes a created flask app featuring the following routes:
   * When given the start and the end date, calculates the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
   
  For instance, here is an example of the /station route:
+ 
  ![app](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/app2.png?raw=true)
+ 
  With the returned values:
+ 
  ![app](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/app.png?raw=true)
