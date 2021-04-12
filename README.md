@@ -14,7 +14,7 @@ Querying is further used to return a histogram of recorded temperatures from the
 
 More plots and analysis are also included in the Notebook based on temperature and rainfall amounts over specified periods of time.
 
-This project also includes a created flask app [app.py](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/app.py) file featuring the following routes that return queried information from the dataset:
+This project also includes a created **flask app** [app.py](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/app.py) file featuring the following routes that return queried information from the dataset:
 
 * `/`
 
