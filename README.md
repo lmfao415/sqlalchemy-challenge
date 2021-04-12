@@ -12,7 +12,7 @@ Querying is further used to return a histogram of recorded temperatures from the
 ![sample](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/tempfreq.png)
 
 
-This project also includes a created flask app [app.py](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/app.py) file featuring the following routes:
+This project also includes a created flask app [app.py](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/app.py) file featuring the following routes that return queried information from the dataset:
 
 * `/`
 
