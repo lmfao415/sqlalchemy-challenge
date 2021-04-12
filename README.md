@@ -11,7 +11,7 @@ Querying is further used to return the most active weather station and a histogr
 ![sample](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/tempfreq.png)
 
 
-This project also includes a created flask app.
+This project also includes a created flask app featuring the following routes:
 
 * `/`
 
