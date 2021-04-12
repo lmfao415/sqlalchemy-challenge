@@ -2,6 +2,7 @@
 
 This repository uses SQLAlchemy ORM queries, Pandas, and Matplotlib to explore and analyze the [Hawaii weather](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/hawaii.sqlite) sqlite database.
 
+The [climate_starter](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/climate_starter.ipynb) Jupyter Notebook contains the queries and plots for this project. 
 Using SQLalchemy, the database is queried and then Pandas used to organize and then plot the daily precipitation values:
 
 ![q](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/query.png?raw=true)
@@ -11,6 +12,7 @@ Querying is further used to return a histogram of recorded temperatures from the
 
 ![sample](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/Resources/tempfreq.png)
 
+More plots and analysis are also included in the Notebook based on temperature and rainfall amounts over specified periods of time.
 
 This project also includes a created flask app [app.py](https://github.com/lmfao415/sqlalchemy-challenge/blob/main/app.py) file featuring the following routes that return queried information from the dataset:
 
